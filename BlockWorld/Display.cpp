@@ -1,13 +1,13 @@
 #include "Display.h"
 #include <GL\glew.h>
 
-Display & Display::get(std::string title)
+Display & Display::get()
 {
-	static Display display(title);
+	static Display display;
 	return display;
 }
 
-Display::Display(std::string title)
+Display::Display()
 {
 	//on définit un objet qui contiendra tous les paramètres de notre fenetre
 	sf::ContextSettings settings;
@@ -17,7 +17,7 @@ Display::Display(std::string title)
 
 	//création de la fenetre
 	m_window = std::make_unique<sf::RenderWindow>(sf::VideoMode(WIDTH, HEIGHT),
-		title,
+		"Default",
 		sf::Style::Close,
 		settings);
 
@@ -39,6 +39,11 @@ Display::Display(std::string title)
 	m_window->setMouseCursorVisible(true);
 	m_window->setFramerateLimit(60);
 	m_window->setVerticalSyncEnabled(true);
+}
+
+void Display::setTitle(std::string title)
+{
+	m_window->setTitle(title);
 }
 
 void Display::close()
@@ -64,7 +69,7 @@ bool Display::isSelect()
 	return m_window->hasFocus();
 }
 
-const sf::Window & Display::get()
+const sf::Window & Display::getWindow()
 {
 	return *m_window;
 }

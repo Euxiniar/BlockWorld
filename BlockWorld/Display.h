@@ -6,12 +6,13 @@
 class Display
 {
 public:
-	static Display& get(std::string title);
-	Display(std::string title);
+	static Display& get();
+	Display();
+	void setTitle(std::string title);
 	void close();
 	void checkForClose();
 	bool isSelect();
-	const sf::Window& get();
+	const sf::Window& getWindow();
 
 	const static int WIDTH = 1080;
 	const static int HEIGHT = 720;

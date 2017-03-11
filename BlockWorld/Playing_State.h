@@ -8,5 +8,7 @@ namespace State
 	{
 	public:
 		Playing(Application & app);
+		void input(Camera& camera, float dt) override;
+		void update() override;
 	};
 }

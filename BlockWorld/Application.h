@@ -5,6 +5,7 @@
 
 #include "Game_State.h"
 #include "Random_Maths.h"
+#include "Camera.h"
 
 class Application
 {
@@ -28,6 +29,7 @@ private:
 
 	//TODO Création de la partie du programme qui s'occupera du rendu
 
-	//TODO Création du point de vue, qui sera une camera
+	//Création du point de vue, qui sera une camera
+	Camera camera;
 };
 

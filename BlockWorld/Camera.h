@@ -2,8 +2,7 @@
 #include "Entity.h"
 #include "Display.h"
 
-namespace Entity
-{
+
 	class Camera :
 		public Entity
 	{
@@ -18,4 +17,3 @@ namespace Entity
 		const int centerY = Display::HEIGHT / 2;
 
 	};
-}

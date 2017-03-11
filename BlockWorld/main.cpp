@@ -1,6 +1,8 @@
 #include "Display.h"
+#include "Application.h"
 
 int main()
 {
-	Display::get("BlockWorld");
+	Display::get().setTitle("BlockWorld");
+	Application app;
 }
