@@ -2,7 +2,7 @@
 #include "Glm_Common.h"
 
 
-class Entity
+struct Entity
 {
 public:
 	Vector3 position;

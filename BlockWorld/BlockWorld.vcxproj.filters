@@ -57,7 +57,12 @@
     <ClCompile Include="Shader_Program.cpp">
       <Filter>Shaders</Filter>
     </ClCompile>
-    <ClCompile Include="Simple_Shader.cpp" />
+    <ClCompile Include="Simple_Shader.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix_Maths.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Display.h">
@@ -93,7 +98,12 @@
     <ClInclude Include="Shader_Program.h">
       <Filter>Shaders</Filter>
     </ClInclude>
-    <ClInclude Include="Simple_Shader.h" />
+    <ClInclude Include="Simple_Shader.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix_Maths.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Shaders\Simple_Fragment.glsl">
