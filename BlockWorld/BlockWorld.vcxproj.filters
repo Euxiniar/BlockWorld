@@ -5,16 +5,47 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Affichage">
+      <UniqueIdentifier>{3a19c293-c631-4906-b633-caa2a9fc8866}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{b0a4c8ee-7e85-4fa8-ab80-f4c446835b30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Maths">
+      <UniqueIdentifier>{32018121-4b36-47cb-9faa-c8a3f6f10efe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Display.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Affichage</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Affichage</Filter>
+    </ClCompile>
+    <ClCompile Include="Random_Maths.cpp">
+      <Filter>Maths</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Display.h" />
+    <ClInclude Include="Display.h">
+      <Filter>Affichage</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Affichage</Filter>
+    </ClInclude>
+    <ClInclude Include="Random_Maths.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Shaders\Simple_Fragment.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Data\Shaders\Simple_Vertex.glsl">
+      <Filter>Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

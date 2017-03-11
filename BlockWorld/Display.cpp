@@ -36,11 +36,6 @@ Display::Display(std::string title)
 	window->setVerticalSyncEnabled(true);
 }
 
-Display::~Display()
-{
-	window->close();
-}
-
 void Display::close()
 {
 	window->close();

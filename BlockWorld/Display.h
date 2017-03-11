@@ -7,7 +7,6 @@ class Display
 {
 public:
 	Display(std::string title);
-	~Display();
 	void close();
 	void checkForClose();
 	bool isSelect();

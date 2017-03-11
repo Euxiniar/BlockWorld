@@ -121,11 +121,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Application.cpp" />
     <ClCompile Include="Display.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Random_Maths.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Application.h" />
     <ClInclude Include="Display.h" />
+    <ClInclude Include="Random_Maths.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Shaders\Simple_Fragment.glsl" />
+    <None Include="Data\Shaders\Simple_Vertex.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
