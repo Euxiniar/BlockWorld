@@ -25,6 +25,12 @@
     <Filter Include="Renderer">
       <UniqueIdentifier>{7ce79bd9-db08-416e-9933-a217124fcad4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Blocks">
+      <UniqueIdentifier>{4d311118-3875-475b-b36c-6691a4d0d847}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Textures">
+      <UniqueIdentifier>{b569216f-48f6-4944-9dee-4a05bca70f57}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Display.cpp">
@@ -62,6 +68,18 @@
     </ClCompile>
     <ClCompile Include="Matrix_Maths.cpp">
       <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Quad.cpp">
+      <Filter>Blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="Basic_Texture.cpp">
+      <Filter>Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture_Atlas.cpp">
+      <Filter>Textures</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +121,18 @@
     </ClInclude>
     <ClInclude Include="Matrix_Maths.h">
       <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Quad.h">
+      <Filter>Blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="Basic_Texture.h">
+      <Filter>Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture_Atlas.h">
+      <Filter>Textures</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
