@@ -129,7 +129,9 @@
     <ClCompile Include="Playing_State.cpp" />
     <ClCompile Include="Random_Maths.cpp" />
     <ClCompile Include="Shader_Loader.cpp" />
+    <ClCompile Include="Shader_Program.cpp" />
     <ClCompile Include="Simple_Renderer.cpp" />
+    <ClCompile Include="Simple_Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
@@ -141,7 +143,9 @@
     <ClInclude Include="Playing_State.h" />
     <ClInclude Include="Random_Maths.h" />
     <ClInclude Include="Shader_Loader.h" />
+    <ClInclude Include="Shader_Program.h" />
     <ClInclude Include="Simple_Renderer.h" />
+    <ClInclude Include="Simple_Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Shaders\Simple_Fragment.glsl" />
