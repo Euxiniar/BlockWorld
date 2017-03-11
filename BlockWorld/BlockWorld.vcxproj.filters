@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Fichiers sources">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Affichage">
       <UniqueIdentifier>{3a19c293-c631-4906-b633-caa2a9fc8866}</UniqueIdentifier>
     </Filter>
@@ -14,11 +10,20 @@
     <Filter Include="Maths">
       <UniqueIdentifier>{32018121-4b36-47cb-9faa-c8a3f6f10efe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{45a97976-7d53-46ba-8db9-50f7b29ef1c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Launcher">
+      <UniqueIdentifier>{e09bd05a-4562-4cff-bc1c-d0563a1232c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity">
+      <UniqueIdentifier>{aec36c6d-4646-4a87-8d6e-423b8c0e4699}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rules">
+      <UniqueIdentifier>{05c56b2e-31b9-42a9-883b-baa6ec2ca454}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Display.cpp">
       <Filter>Affichage</Filter>
     </ClCompile>
@@ -27,6 +32,18 @@
     </ClCompile>
     <ClCompile Include="Random_Maths.cpp">
       <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_State.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Launcher</Filter>
+    </ClCompile>
+    <ClCompile Include="Playing.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -38,6 +55,21 @@
     </ClInclude>
     <ClInclude Include="Random_Maths.h">
       <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_State.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Playing.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Glm_Common.h">
+      <Filter>Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Entity</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

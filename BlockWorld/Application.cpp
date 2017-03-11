@@ -1,20 +1,25 @@
 #include "Application.h"
+#include "Playing.h"
 
 Application::Application()
 {
 	init();
+	//ajout de l'application dans le game_State
+	pushState(std::make_unique<State::Playing>(*this));
 }
 
 void Application::runMainGameLoop()
 {
 }
 
-void Application::pushState()
+void Application::pushState(std::unique_ptr<State::Game_State> state)
 {
+	m_states.push(std::move(state));
 }
 
 void Application::popState()
 {
+	m_states.pop();
 }
 
 void Application::resetSong()

@@ -1,6 +1,11 @@
 #include "Display.h"
 #include <GL\glew.h>
 
+Display & Display::get(std::string title)
+{
+	static Display display(title);
+	return display;
+}
 
 Display::Display(std::string title)
 {
@@ -11,7 +16,7 @@ Display::Display(std::string title)
 	settings.minorVersion = 3;
 
 	//création de la fenetre
-	window = std::make_unique<sf::RenderWindow>(sf::VideoMode(WIDTH, HEIGHT),
+	m_window = std::make_unique<sf::RenderWindow>(sf::VideoMode(WIDTH, HEIGHT),
 		title,
 		sf::Style::Close,
 		settings);
@@ -31,21 +36,21 @@ Display::Display(std::string title)
 	glFrontFace(GL_CW);
 	
 	//les derniers paramètres de la fenetre
-	window->setMouseCursorVisible(true);
-	window->setFramerateLimit(60);
-	window->setVerticalSyncEnabled(true);
+	m_window->setMouseCursorVisible(true);
+	m_window->setFramerateLimit(60);
+	m_window->setVerticalSyncEnabled(true);
 }
 
 void Display::close()
 {
-	window->close();
+	m_window->close();
 }
 
 void Display::checkForClose()
 {
 	//on crée un evenement pour récupérer les actions subits par la fenetre
 	sf::Event event;
-	while (window->pollEvent(event))
+	while (m_window->pollEvent(event))
 	{
 		if (event.type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 		{
@@ -56,5 +61,10 @@ void Display::checkForClose()
 
 bool Display::isSelect()
 {
-	return window->hasFocus();
+	return m_window->hasFocus();
+}
+
+const sf::Window & Display::get()
+{
+	return *m_window;
 }

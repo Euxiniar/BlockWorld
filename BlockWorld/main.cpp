@@ -2,5 +2,5 @@
 
 int main()
 {
-	Display display("BlockWorld");
+	Display::get("BlockWorld");
 }
