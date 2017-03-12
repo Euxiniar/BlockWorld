@@ -1,5 +1,7 @@
 #pragma once
 #include "Game_State.h"
+#include "Quad.h"
+#include "Texture_Atlas.h"
 
 namespace State
 {
@@ -11,5 +13,9 @@ namespace State
 		void input(Camera& camera, float dt) override;
 		void update() override;
 		void draw(Renderer::Master_Renderer& renderer) override;
+
+	private:
+		Texture::Texture_Atlas m_texture;
+		Quad m_quad;
 	};
 }

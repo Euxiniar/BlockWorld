@@ -18,8 +18,11 @@ namespace Shader
 		//on appelle la fonction createProgram (seul un program peut etre execute par la carte graphique)
 		auto programID = createProgram(vertexShaderID, fragmentShaderID);
 
+		glDeleteShader(vertexShaderID);
+		glDeleteShader(fragmentShaderID);
+
 		//on retourne l'ID du program pour pouvoir l'utiliser
-		return 0;
+		return programID;
 	}
 
 	std::string getSource(const std::string & sourceFile)

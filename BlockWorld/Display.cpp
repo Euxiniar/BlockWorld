@@ -36,7 +36,7 @@ Display::Display()
 	glFrontFace(GL_CW);
 	
 	//les derniers paramètres de la fenetre
-	m_window->setMouseCursorVisible(true);
+	m_window->setMouseCursorVisible(false);
 	m_window->setFramerateLimit(60);
 	m_window->setVerticalSyncEnabled(true);
 }

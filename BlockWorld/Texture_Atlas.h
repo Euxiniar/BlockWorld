@@ -6,8 +6,7 @@
 
 namespace Texture
 {
-	class Texture_Atlas
-		: public Basic_Texture
+	class Texture_Atlas : public Basic_Texture
 	{
 	public:
 		Texture_Atlas(const std::string& textureName, GLuint size, GLuint textureSize);

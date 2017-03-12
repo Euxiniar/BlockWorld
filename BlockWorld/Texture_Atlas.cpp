@@ -9,6 +9,8 @@ namespace Texture
 		: m_size(size)
 		, m_textureSize(textureSize)
 	{
+		//on applique la texture
+		load(textureName);
 	}
 
 	std::vector<GLfloat> Texture_Atlas::getTextureCoords(const Vector2 & location)

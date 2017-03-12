@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Random_Maths.h"
 
 namespace Maths
@@ -28,7 +27,6 @@ namespace Maths
 	void Random::init()
 	{
 		gen.seed(std::random_device{}());
-		std::cout << gen;
 	}
 
 }

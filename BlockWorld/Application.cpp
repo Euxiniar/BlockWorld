@@ -73,7 +73,7 @@ void Application::resetSong()
 	m_song.play();
 	m_songDuration = m_song.getDuration();
 	m_songTimer.restart();
-	m_song.setVolume(5);
+	m_song.setVolume(100);
 }
 
 void Application::init()

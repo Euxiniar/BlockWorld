@@ -1,6 +1,7 @@
 #include "Simple_Renderer.h"
 #include "Matrix_Maths.h"
 #include "Quad.h"
+#include <iostream>
 
 namespace Renderer
 {
@@ -12,6 +13,7 @@ namespace Renderer
 	void Simple_Renderer::update(const Camera & camera)
 	{
 		m_shader.bind();
+
 		//on rempli la variable de temps du shader avec la valeur du temps
 		m_shader.setTime(m_clock.getElapsedTime().asSeconds());
 

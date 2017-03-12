@@ -3,8 +3,7 @@
 
 namespace Shader
 {
-	class Simple_Shader :
-		public Shader_Program
+	class Simple_Shader : public Shader_Program
 	{
 	public:
 		Simple_Shader();

@@ -1,11 +1,16 @@
 #include "Playing_State.h"
 #include "Camera.h"
+#include "Master_Renderer.h"
+#include <iostream>
 
 namespace State
 {
 	Playing::Playing(Application & app)
-		:  Game_State(app)
+		:  Game_State(app),
+		m_texture("Texture_Atlas", 512, 16)
+		, m_quad(m_texture)
 	{
+		m_quad.position.z -= 5;
 	}
 
 	void Playing::input(Camera & camera, float dt)
@@ -16,10 +21,10 @@ namespace State
 
 	void Playing::update()
 	{
-		
 	}
 
 	void Playing::draw(Renderer::Master_Renderer & renderer)
 	{
+		renderer.draw(m_quad);
 	}
 }
