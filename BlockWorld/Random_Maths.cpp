@@ -1,9 +1,11 @@
+#include <iostream>
 #include "Random_Maths.h"
 
 namespace Maths
 {
 	Random::Random()
 	{
+		init();
 	}
 
 	void Random::setSeed(unsigned int seed)
@@ -26,6 +28,7 @@ namespace Maths
 	void Random::init()
 	{
 		gen.seed(std::random_device{}());
+		std::cout << gen;
 	}
 
 }

@@ -10,5 +10,6 @@ namespace State
 		Playing(Application & app);
 		void input(Camera& camera, float dt) override;
 		void update() override;
+		void draw(Renderer::Master_Renderer& renderer) override;
 	};
 }

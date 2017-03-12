@@ -9,10 +9,16 @@ public:
 	static Display& get();
 	Display();
 	void setTitle(std::string title);
+
 	void close();
+	void clear();
+	void update();
+
 	void checkForClose();
+	bool isOpen();
 	bool isSelect();
 	const sf::Window& getWindow();
+	
 
 	const static int WIDTH = 1080;
 	const static int HEIGHT = 720;

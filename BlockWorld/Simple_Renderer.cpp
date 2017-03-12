@@ -4,12 +4,12 @@
 
 namespace Renderer
 {
-	void Renderer::Simple_Shader::draw(const Quad & quad)
+	void Simple_Renderer::draw(const Quad & quad)
 	{
 		m_quads.push_back(&quad);
 	}
 
-	void Renderer::Simple_Shader::update(const Camera & camera)
+	void Simple_Renderer::update(const Camera & camera)
 	{
 		m_shader.bind();
 		//on rempli la variable de temps du shader avec la valeur du temps
@@ -26,7 +26,7 @@ namespace Renderer
 		m_quads.clear();
 	}
 
-	void Renderer::Simple_Shader::prepare(const Quad & quad)
+	void Simple_Renderer::prepare(const Quad & quad)
 	{
 		quad.getModel().bind(); //on récupère le model
 

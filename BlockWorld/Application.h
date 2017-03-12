@@ -6,6 +6,7 @@
 #include "Game_State.h"
 #include "Random_Maths.h"
 #include "Camera.h"
+#include "Master_Renderer.h"
 
 class Application
 {
@@ -27,9 +28,10 @@ private:
 
 	Maths::Random m_random;
 
-	//TODO Création de la partie du programme qui s'occupera du rendu
+	//Creation de la partie du programme qui s'occupera du rendu
+	Renderer::Master_Renderer m_renderer;
 
-	//Création du point de vue, qui sera une camera
+	//Creation du point de vue, qui sera une camera
 	Camera camera;
 };
 

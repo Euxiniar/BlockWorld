@@ -8,7 +8,7 @@ class Camera;
 
 namespace Renderer
 {
-	class Simple_Shader
+	class Simple_Renderer
 	{
 	public:
 		void draw(const Quad& quad);

@@ -5,4 +5,5 @@ int main()
 {
 	Display::get().setTitle("BlockWorld");
 	Application app;
+	app.runMainGameLoop();
 }

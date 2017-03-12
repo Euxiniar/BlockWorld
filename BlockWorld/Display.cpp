@@ -51,6 +51,18 @@ void Display::close()
 	m_window->close();
 }
 
+void Display::clear()
+{
+	//effacage du contexte OpenGL et vidage des buffers
+	glClearColor(0.0, 0.0, 0.0, 1.0);
+	glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
+}
+
+void Display::update()
+{
+	m_window->display();
+}
+
 void Display::checkForClose()
 {
 	//on crée un evenement pour récupérer les actions subits par la fenetre
@@ -62,6 +74,12 @@ void Display::checkForClose()
 			close();
 		}
 	}
+}
+
+bool Display::isOpen()
+{
+	//retourne l'etat de la fenetre
+	return m_window->isOpen();
 }
 
 bool Display::isSelect()

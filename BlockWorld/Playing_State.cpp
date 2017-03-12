@@ -18,4 +18,8 @@ namespace State
 	{
 		
 	}
+
+	void Playing::draw(Renderer::Master_Renderer & renderer)
+	{
+	}
 }
