@@ -3,14 +3,13 @@
 
 namespace Texture
 {
-	Texture_Atlas::Texture_Atlas(const std::string & textureName, 
-		GLuint size, 
+	Texture_Atlas::Texture_Atlas(const std::string & textureName,
+		GLuint size,
 		GLuint textureSize)
 		: m_size(size)
-		, m_textureSize(textureSize)
+		, m_textureSize(textureSize),
+		Basic_Texture(textureName)
 	{
-		//on applique la texture
-		load(textureName);
 	}
 
 	std::vector<GLfloat> Texture_Atlas::getTextureCoords(const Vector2 & location)
@@ -34,7 +33,7 @@ namespace Texture
 			xMax, yMax,
 			xMin, yMax,
 			xMin, yMin,
-			xMax, yMin
+			xMax, yMin,
 		};
 	}
 	

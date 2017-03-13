@@ -60,6 +60,7 @@ void Application::resetSong()
 	{
 		"Game_of_Thrones",
 		"Doctor_Who",
+		"The_Witcher_3"
 	};
 
 	static auto lastSong = songNames.size();

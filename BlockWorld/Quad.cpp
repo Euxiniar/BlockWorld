@@ -63,11 +63,55 @@ std::vector<GLuint> indices =
 	22, 23, 20
 };
 
+////x, y, z
+//std::vector<GLfloat> vertexPositions =
+//{
+//	//Back
+//	1, 0, 0,
+//	0, 0, 0,
+//	0, 1, 0,
+//	1, 1, 0,
+//
+//	//Front
+//	0, 0, 1,
+//	1, 0, 1,
+//	1, 1, 1,
+//	0, 1, 1,
+//};
+//
+//
+//std::vector<GLuint> indices =
+//{
+//	//back
+//	0, 1, 2,
+//	2, 3, 0,
+//
+//	//left
+//	1, 2, 7,
+//	7, 4, 1,
+//	
+//	//front
+//	7, 6, 4,
+//	4, 5, 6,
+//
+//	//right
+//	6, 5, 0,
+//	0, 3, 6,
+//
+//	//top
+//	7, 2, 3,
+//	3, 6, 7,
+//
+//	//bottom
+//	4, 5, 0,
+//	0, 1, 4,
+//};
+
 std::vector<GLfloat> textureCoords;
 
 void insertTextureCoords(const std::vector<GLfloat>& coords)
 {
-	//on se positionne à la derniere place du tableau (qui est vide au début) et on rempli de coordonnées)
+	//on se positionne à la derniere place du tableau (qui est vide au début) et on rempli de coordonnees)
 	textureCoords.insert(textureCoords.end(), coords.begin(), coords.end());
 }
 

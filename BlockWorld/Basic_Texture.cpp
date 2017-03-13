@@ -4,6 +4,11 @@
 
 namespace Texture
 {
+	Basic_Texture::Basic_Texture(std::string fileName)
+	{
+		load(fileName);
+	}
+
 	void Basic_Texture::load(const std::string & fileName)
 	{
 		std::string filePath = "Data/Textures/" + fileName + ".png";
@@ -30,8 +35,8 @@ namespace Texture
 			image.getPixelsPtr());
 
 		//En cas de débordement de la forme, la texture se déforme pour rentrer
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
 
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);

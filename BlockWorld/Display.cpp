@@ -31,9 +31,9 @@ Display::Display()
 	glEnable(GL_DEPTH_TEST);
 
 	//on rajoute le cull face pour n'afficher que les faces qui sont faces à la camera
-	glEnable(GL_CULL_FACE);
+	/*glEnable(GL_CULL_FACE);
 	glCullFace(GL_FRONT);
-	glFrontFace(GL_CW);
+	glFrontFace(GL_CW);*/
 	
 	//les derniers paramètres de la fenetre
 	m_window->setMouseCursorVisible(false);
