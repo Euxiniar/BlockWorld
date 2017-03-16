@@ -101,43 +101,6 @@ void Model::addVBO(int dim, const std::vector<GLfloat>& data)
 	m_buffers.push_back(vbo);
 }
 
-void Model::addVBOTex(int dim, const std::vector<GLfloat>& data)
-{
-	GLuint vbo;
-	//on crée une case mémoire dans la ram de la carte graphique
-	glGenBuffers(1, &vbo);
-
-	//on la selectionne pour agir dessus
-	glBindBuffer(GL_ARRAY_BUFFER, vbo);
-
-	//on réserve de la RAM au vbo. 
-	//C'est un objet rarement mis a jour donc il est static
-	glBufferData(GL_ARRAY_BUFFER,
-		(data.size() - 2) * sizeof(GLfloat),
-		0,
-		GL_STATIC_DRAW);
-
-	//on envoie les données dans le buffer
-	glBufferSubData(GL_ARRAY_BUFFER,
-		0,
-		data.size() * sizeof(GLfloat),
-		data.data());
-
-	//on accède aux sommets dans la mémoire vidéo à la place m_vboCount
-	glVertexAttribPointer(m_vboCount,
-		dim,
-		GL_FLOAT,
-		GL_FALSE,
-		0,
-		0);
-
-	//on active le tableau puis on incrémente l'ID du tableau
-	glEnableVertexAttribArray(m_vboCount++);
-
-	//on stock l'ID du vbo courant dans le tableau m_buffers
-	m_buffers.push_back(vbo);
-}
-
 void Model::addEBO(const std::vector<GLuint>& indices)
 {
 	GLuint ebo;

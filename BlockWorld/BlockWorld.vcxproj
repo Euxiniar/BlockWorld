@@ -129,6 +129,7 @@
     <ClCompile Include="Master_Renderer.cpp" />
     <ClCompile Include="Matrix_Maths.cpp" />
     <ClCompile Include="Model.cpp" />
+    <ClCompile Include="MusicApp.cpp" />
     <ClCompile Include="Playing_State.cpp" />
     <ClCompile Include="Quad.cpp" />
     <ClCompile Include="Random_Maths.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="Master_Renderer.h" />
     <ClInclude Include="Matrix_Maths.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="MusicApp.h" />
     <ClInclude Include="Playing_State.h" />
     <ClInclude Include="Quad.h" />
     <ClInclude Include="Random_Maths.h" />

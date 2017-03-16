@@ -22,7 +22,6 @@ public:
 
 private:
 	void addVBO(int dim, const std::vector<GLfloat>& data);
-	void addVBOTex(int dim, const std::vector<GLfloat>& data);
 	void addEBO(const std::vector<GLuint>& indices);
 
 	std::vector<GLuint> m_buffers;

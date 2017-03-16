@@ -84,6 +84,7 @@
     <ClCompile Include="Master_Renderer.cpp">
       <Filter>Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="MusicApp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Display.h">
@@ -140,6 +141,7 @@
     <ClInclude Include="Master_Renderer.h">
       <Filter>Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="MusicApp.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Shaders\Simple_Fragment.glsl">
