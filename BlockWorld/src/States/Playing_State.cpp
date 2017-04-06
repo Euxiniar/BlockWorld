@@ -1,6 +1,6 @@
 #include "Playing_State.h"
-#include "Camera.h"
-#include "Master_Renderer.h"
+#include "../Entity/Camera.h"
+#include "../Renderer/Master_Renderer.h"
 #include <iostream>
 
 namespace State

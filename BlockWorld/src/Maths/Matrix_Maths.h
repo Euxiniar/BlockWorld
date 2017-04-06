@@ -1,5 +1,5 @@
 #pragma once
-#include "Glm_Common.h"
+#include "../Rules/Glm_Common.h"
 
 struct Entity;
 class Camera;

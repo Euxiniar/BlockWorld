@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <memory>
-#include <SFML\Graphics.hpp>
+#include <SFML/Graphics.hpp>
 
 class Display
 {

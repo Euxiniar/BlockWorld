@@ -2,11 +2,11 @@
 #include <stack>
 #include <memory>
 
-#include "Game_State.h"
+#include "../States/Game_State.h"
 #include "MusicApp.h"
-#include "Random_Maths.h"
-#include "Camera.h"
-#include "Master_Renderer.h"
+#include "../Maths/Random_Maths.h"
+#include "../Entity/Camera.h"
+#include "../Renderer/Master_Renderer.h"
 
 class Application
 {

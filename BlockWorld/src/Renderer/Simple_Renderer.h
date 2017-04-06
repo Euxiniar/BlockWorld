@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "Simple_Shader.h"
+#include "../Shaders/Simple_Shader.h"
 #include <SFML/System/Clock.hpp>
 
 class Quad;

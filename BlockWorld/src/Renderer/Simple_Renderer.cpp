@@ -1,6 +1,6 @@
 #include "Simple_Renderer.h"
-#include "Matrix_Maths.h"
-#include "Quad.h"
+#include "../Maths/Matrix_Maths.h"
+#include "../Entity/Blocks/Quad.h"
 #include <iostream>
 
 namespace Renderer

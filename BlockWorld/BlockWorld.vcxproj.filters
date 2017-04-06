@@ -1,154 +1,167 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Affichage">
-      <UniqueIdentifier>{3a19c293-c631-4906-b633-caa2a9fc8866}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Shaders">
-      <UniqueIdentifier>{b0a4c8ee-7e85-4fa8-ab80-f4c446835b30}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Maths">
-      <UniqueIdentifier>{32018121-4b36-47cb-9faa-c8a3f6f10efe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="States">
-      <UniqueIdentifier>{45a97976-7d53-46ba-8db9-50f7b29ef1c8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Launcher">
-      <UniqueIdentifier>{e09bd05a-4562-4cff-bc1c-d0563a1232c1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Entity">
-      <UniqueIdentifier>{aec36c6d-4646-4a87-8d6e-423b8c0e4699}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Rules">
-      <UniqueIdentifier>{05c56b2e-31b9-42a9-883b-baa6ec2ca454}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Renderer">
-      <UniqueIdentifier>{7ce79bd9-db08-416e-9933-a217124fcad4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Entity\Blocks">
-      <UniqueIdentifier>{4d311118-3875-475b-b36c-6691a4d0d847}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Entity\Textures">
-      <UniqueIdentifier>{b569216f-48f6-4944-9dee-4a05bca70f57}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="src\States\Game_State.cpp">
+      <Filter>src\States</Filter>
+    </ClCompile>
+    <ClCompile Include="src\States\Playing_State.cpp">
+      <Filter>src\States</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shaders\Shader_Loader.cpp">
+      <Filter>src\Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shaders\Shader_Program.cpp">
+      <Filter>src\Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shaders\Simple_Shader.cpp">
+      <Filter>src\Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\Master_Renderer.cpp">
+      <Filter>src\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer\Simple_Renderer.cpp">
+      <Filter>src\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Maths\Matrix_Maths.cpp">
+      <Filter>src\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Maths\Random_Maths.cpp">
+      <Filter>src\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Launcher\main.cpp">
+      <Filter>src\Launcher</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Entity\Camera.cpp">
+      <Filter>src\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Entity\Blocks\Model.cpp">
+      <Filter>src\Entity\Blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Entity\Blocks\Quad.cpp">
+      <Filter>src\Entity\Blocks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Entity\Textures\Basic_Texture.cpp">
+      <Filter>src\Entity\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Entity\Textures\Texture_Atlas.cpp">
+      <Filter>src\Entity\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Affichage\Application.cpp">
+      <Filter>src\Affichage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Affichage\Display.cpp">
+      <Filter>src\Affichage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Affichage\MusicApp.cpp">
+      <Filter>src\Affichage</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Display.cpp">
-      <Filter>Affichage</Filter>
-    </ClCompile>
-    <ClCompile Include="Application.cpp">
-      <Filter>Affichage</Filter>
-    </ClCompile>
-    <ClCompile Include="Random_Maths.cpp">
-      <Filter>Maths</Filter>
-    </ClCompile>
-    <ClCompile Include="Game_State.cpp">
-      <Filter>States</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Launcher</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Playing_State.cpp">
-      <Filter>States</Filter>
-    </ClCompile>
-    <ClCompile Include="Simple_Renderer.cpp">
-      <Filter>Renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="Shader_Loader.cpp">
-      <Filter>Shaders</Filter>
-    </ClCompile>
-    <ClCompile Include="Shader_Program.cpp">
-      <Filter>Shaders</Filter>
-    </ClCompile>
-    <ClCompile Include="Simple_Shader.cpp">
-      <Filter>Shaders</Filter>
-    </ClCompile>
-    <ClCompile Include="Matrix_Maths.cpp">
-      <Filter>Maths</Filter>
-    </ClCompile>
-    <ClCompile Include="Quad.cpp">
-      <Filter>Entity\Blocks</Filter>
-    </ClCompile>
-    <ClCompile Include="Model.cpp">
-      <Filter>Entity\Blocks</Filter>
-    </ClCompile>
-    <ClCompile Include="Basic_Texture.cpp">
-      <Filter>Entity\Textures</Filter>
-    </ClCompile>
-    <ClCompile Include="Texture_Atlas.cpp">
-      <Filter>Entity\Textures</Filter>
-    </ClCompile>
-    <ClCompile Include="Master_Renderer.cpp">
-      <Filter>Renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="MusicApp.cpp" />
+    <ClInclude Include="src\States\Game_State.h">
+      <Filter>src\States</Filter>
+    </ClInclude>
+    <ClInclude Include="src\States\Playing_State.h">
+      <Filter>src\States</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shaders\Shader_Loader.h">
+      <Filter>src\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shaders\Shader_Program.h">
+      <Filter>src\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shaders\Simple_Shader.h">
+      <Filter>src\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rules\Glm_Common.h">
+      <Filter>src\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\Master_Renderer.h">
+      <Filter>src\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer\Simple_Renderer.h">
+      <Filter>src\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\Matrix_Maths.h">
+      <Filter>src\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\Random_Maths.h">
+      <Filter>src\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Entity\Camera.h">
+      <Filter>src\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Entity\Entity.h">
+      <Filter>src\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Entity\Blocks\Model.h">
+      <Filter>src\Entity\Blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Entity\Blocks\Quad.h">
+      <Filter>src\Entity\Blocks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Entity\Textures\Basic_Texture.h">
+      <Filter>src\Entity\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Entity\Textures\Texture_Atlas.h">
+      <Filter>src\Entity\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Affichage\Application.h">
+      <Filter>src\Affichage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Affichage\Display.h">
+      <Filter>src\Affichage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Affichage\MusicApp.h">
+      <Filter>src\Affichage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Display.h">
-      <Filter>Affichage</Filter>
-    </ClInclude>
-    <ClInclude Include="Application.h">
-      <Filter>Affichage</Filter>
-    </ClInclude>
-    <ClInclude Include="Random_Maths.h">
-      <Filter>Maths</Filter>
-    </ClInclude>
-    <ClInclude Include="Game_State.h">
-      <Filter>States</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Entity</Filter>
-    </ClInclude>
-    <ClInclude Include="Glm_Common.h">
-      <Filter>Rules</Filter>
-    </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>Entity</Filter>
-    </ClInclude>
-    <ClInclude Include="Playing_State.h">
-      <Filter>States</Filter>
-    </ClInclude>
-    <ClInclude Include="Simple_Renderer.h">
-      <Filter>Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="Shader_Loader.h">
-      <Filter>Shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="Shader_Program.h">
-      <Filter>Shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="Simple_Shader.h">
-      <Filter>Shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="Matrix_Maths.h">
-      <Filter>Maths</Filter>
-    </ClInclude>
-    <ClInclude Include="Quad.h">
-      <Filter>Entity\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="Model.h">
-      <Filter>Entity\Blocks</Filter>
-    </ClInclude>
-    <ClInclude Include="Basic_Texture.h">
-      <Filter>Entity\Textures</Filter>
-    </ClInclude>
-    <ClInclude Include="Texture_Atlas.h">
-      <Filter>Entity\Textures</Filter>
-    </ClInclude>
-    <ClInclude Include="Master_Renderer.h">
-      <Filter>Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="MusicApp.h" />
+    <Filter Include="src">
+      <UniqueIdentifier>{3bcf1c5d-16e4-4ca6-8df8-7ec78e3e2393}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Renderer">
+      <UniqueIdentifier>{0ec3a6b0-5054-4a3e-8249-3275aaef44f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Rules">
+      <UniqueIdentifier>{ba3dc316-e3e2-4938-bb7f-0ba807c5bca6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Shaders">
+      <UniqueIdentifier>{ead99591-973d-493a-bd09-e2dfaeb99d7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\States">
+      <UniqueIdentifier>{35bf1fd1-ba3c-4062-b090-9ef7351cf4d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entity">
+      <UniqueIdentifier>{916e2bd7-1d4d-4e29-93f2-62299d3e2326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entity\Blocks">
+      <UniqueIdentifier>{fb5e3381-ac4e-44f9-a796-504624675233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entity\Textures">
+      <UniqueIdentifier>{8eb5d0b3-cbd1-4e4d-a0f0-a78b467accff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Affichage">
+      <UniqueIdentifier>{61d9a3a8-30d0-4ef1-bded-3ea89de8e42a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Launcher">
+      <UniqueIdentifier>{e172b70d-3c9c-489b-84c1-d4b9ec2ed57f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Maths">
+      <UniqueIdentifier>{b4858a02-1f2f-434b-8c91-f6c9984f9ece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{7a1884c8-f2f2-475d-80ad-7dfa9d0a3a35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\Shaders">
+      <UniqueIdentifier>{e77172a6-1f56-414c-a278-8f2e8a448b7a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Shaders\Simple_Fragment.glsl">
-      <Filter>Shaders</Filter>
+      <Filter>Data\Shaders</Filter>
     </None>
     <None Include="Data\Shaders\Simple_Vertex.glsl">
-      <Filter>Shaders</Filter>
+      <Filter>Data\Shaders</Filter>
     </None>
   </ItemGroup>
 </Project>

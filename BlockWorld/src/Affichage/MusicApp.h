@@ -1,6 +1,6 @@
 #pragma once
-#include <SFML\Audio.hpp>
-#include "Random_Maths.h"
+#include <SFML/Audio.hpp>
+#include "../Maths/Random_Maths.h"
 
 class MusicApp
 {

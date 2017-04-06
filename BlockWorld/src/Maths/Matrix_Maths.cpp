@@ -1,5 +1,5 @@
 #include "Matrix_Maths.h"
-#include "Camera.h"
+#include "../Entity/Camera.h"
 
 namespace Maths
 {

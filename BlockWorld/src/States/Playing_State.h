@@ -1,7 +1,7 @@
 #pragma once
 #include "Game_State.h"
-#include "Quad.h"
-#include "Texture_Atlas.h"
+#include "../Entity/Blocks/Quad.h"
+#include "../Entity/Textures/Texture_Atlas.h"
 
 namespace State
 {

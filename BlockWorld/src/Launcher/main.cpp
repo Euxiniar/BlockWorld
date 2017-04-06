@@ -1,5 +1,5 @@
-#include "Display.h"
-#include "Application.h"
+#include "../Affichage/Display.h"
+#include "../Affichage/Application.h"
 
 int main()
 {

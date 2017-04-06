@@ -1,5 +1,5 @@
 #include "Master_Renderer.h"
-#include "Display.h"
+#include "../Affichage/Display.h"
 
 namespace Renderer
 {
