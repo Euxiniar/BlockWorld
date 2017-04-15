@@ -17,5 +17,7 @@ namespace State
 	private:
 		Texture::Texture_Atlas m_texture;
 		Quad m_quad;
+		Quad m_quad2;
+		std::vector<Quad> vecQuad;
 	};
 }

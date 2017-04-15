@@ -44,18 +44,21 @@ void Model::addData(const std::vector<GLfloat>& vertexPositions,
 	addVBO(2, textureCoordinates);
 	addEBO(indices);
 
-	//on déselectionne tout
+	//unbind
 	glBindVertexArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	unbind();
 }
 
 void Model::bind() const
 {
 	glBindVertexArray(m_vao);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_buffers[2]);
 }
 
 void Model::unbind() const
 {
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
 }
 

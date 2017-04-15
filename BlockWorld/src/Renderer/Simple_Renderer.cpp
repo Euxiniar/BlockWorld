@@ -24,6 +24,7 @@ namespace Renderer
 		{
 			prepare(*quad);
 			glDrawElements(GL_TRIANGLES, quad->getModel().getIndicesCount(), GL_UNSIGNED_INT, nullptr);
+			quad->getModel().unbind();
 		}
 		m_quads.clear();
 	}
