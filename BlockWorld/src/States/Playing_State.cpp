@@ -8,17 +8,19 @@ namespace State
 	Playing::Playing(Application & app)
 		:  Game_State(app),
 		m_texture("Texture_Atlas", 512, 16)
-		, m_quad(m_texture)
-		, m_quad2(m_texture)
 	{
-		m_quad.position.z -= 5;
-		m_quad2.position.z -= 4;
-		
-		for (int i = 0; i < 4; i++)
+		m_noise.setBound(0, 0);
+		//std::cout << m_noise.getPositionY(1, 1) * 10;
+		for (int z = 0; z < 16; z++)
 		{
-			Quad* quad = new Quad(m_texture);
-			quad->position.z -= (8+i);
-			vecQuad.push_back(quad);
+			for (int x = 0; x < 16; x++)
+			{
+				Quad* quad = new Quad(m_texture);
+				quad->position.z -= z;
+				quad->position.x -= x;
+				quad->position.y -= static_cast<int>(m_noise.getPositionY(x, z)*10);
+				vecQuad.push_back(quad);
+			}
 		}
 	}
 
@@ -34,8 +36,6 @@ namespace State
 
 	void Playing::draw(Renderer::Master_Renderer & renderer)
 	{
-		renderer.draw(m_quad); //work
-		renderer.draw(m_quad2); //work
 		for (auto& quad : vecQuad) //doesn't work
 		{
 			renderer.draw(*quad);

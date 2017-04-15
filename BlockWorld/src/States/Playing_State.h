@@ -2,6 +2,7 @@
 #include "Game_State.h"
 #include "../Entity/Blocks/Quad.h"
 #include "../Entity/Textures/Texture_Atlas.h"
+#include "../Maths/Noise.h"
 
 namespace State
 {
@@ -16,8 +17,7 @@ namespace State
 
 	private:
 		Texture::Texture_Atlas m_texture;
-		Quad m_quad;
-		Quad m_quad2;
 		std::vector<Quad*> vecQuad;
+		HeightMap::Noise m_noise;
 	};
 }

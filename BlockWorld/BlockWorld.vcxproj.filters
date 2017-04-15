@@ -55,6 +55,12 @@
     <ClCompile Include="src\Affichage\MusicApp.cpp">
       <Filter>src\Affichage</Filter>
     </ClCompile>
+    <ClCompile Include="src\Maths\Noise.cpp">
+      <Filter>src\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Maths\noiseutils.cpp">
+      <Filter>src\Maths</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\States\Game_State.h">
@@ -113,6 +119,12 @@
     </ClInclude>
     <ClInclude Include="src\Affichage\MusicApp.h">
       <Filter>src\Affichage</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\Noise.h">
+      <Filter>src\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Maths\noiseutils.h">
+      <Filter>src\Maths</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

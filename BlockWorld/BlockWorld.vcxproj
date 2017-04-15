@@ -29,6 +29,8 @@
     <ClCompile Include="src\Entity\Textures\Texture_Atlas.cpp" />
     <ClCompile Include="src\Launcher\main.cpp" />
     <ClCompile Include="src\Maths\Matrix_Maths.cpp" />
+    <ClCompile Include="src\Maths\Noise.cpp" />
+    <ClCompile Include="src\Maths\noiseutils.cpp" />
     <ClCompile Include="src\Maths\Random_Maths.cpp" />
     <ClCompile Include="src\Renderer\Master_Renderer.cpp" />
     <ClCompile Include="src\Renderer\Simple_Renderer.cpp" />
@@ -49,6 +51,8 @@
     <ClInclude Include="src\Entity\Textures\Basic_Texture.h" />
     <ClInclude Include="src\Entity\Textures\Texture_Atlas.h" />
     <ClInclude Include="src\Maths\Matrix_Maths.h" />
+    <ClInclude Include="src\Maths\Noise.h" />
+    <ClInclude Include="src\Maths\noiseutils.h" />
     <ClInclude Include="src\Maths\Random_Maths.h" />
     <ClInclude Include="src\Renderer\Master_Renderer.h" />
     <ClInclude Include="src\Renderer\Simple_Renderer.h" />
