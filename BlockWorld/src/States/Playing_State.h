@@ -3,6 +3,7 @@
 #include "../Entity/Blocks/Quad.h"
 #include "../Entity/Textures/Texture_Atlas.h"
 #include "../Maths/Noise.h"
+#include "../World/WChunk.h"
 
 namespace State
 {
@@ -19,5 +20,6 @@ namespace State
 		Texture::Texture_Atlas m_texture;
 		std::vector<Quad*> vecQuad;
 		HeightMap::Noise m_noise;
+		World::Chunk m_chunk;
 	};
 }

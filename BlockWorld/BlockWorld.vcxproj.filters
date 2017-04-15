@@ -61,6 +61,9 @@
     <ClCompile Include="src\Maths\noiseutils.cpp">
       <Filter>src\Maths</Filter>
     </ClCompile>
+    <ClCompile Include="src\World\WChunk.cpp">
+      <Filter>src\World</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\States\Game_State.h">
@@ -126,6 +129,9 @@
     <ClInclude Include="src\Maths\noiseutils.h">
       <Filter>src\Maths</Filter>
     </ClInclude>
+    <ClInclude Include="src\World\WChunk.h">
+      <Filter>src\World</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -166,6 +172,9 @@
     </Filter>
     <Filter Include="Data\Shaders">
       <UniqueIdentifier>{e77172a6-1f56-414c-a278-8f2e8a448b7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\World">
+      <UniqueIdentifier>{ac146544-54ab-4bca-a773-5f2a50b87dfd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

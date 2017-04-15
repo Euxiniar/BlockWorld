@@ -39,6 +39,7 @@
     <ClCompile Include="src\Shaders\Simple_Shader.cpp" />
     <ClCompile Include="src\States\Game_State.cpp" />
     <ClCompile Include="src\States\Playing_State.cpp" />
+    <ClCompile Include="src\World\WChunk.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Affichage\Application.h" />
@@ -62,6 +63,7 @@
     <ClInclude Include="src\Shaders\Simple_Shader.h" />
     <ClInclude Include="src\States\Game_State.h" />
     <ClInclude Include="src\States\Playing_State.h" />
+    <ClInclude Include="src\World\WChunk.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Shaders\Simple_Fragment.glsl" />
