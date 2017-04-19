@@ -1,6 +1,6 @@
 #include "Quad.h"
 #include <vector>
-#include "../Textures/Texture_Atlas.h"
+#include "../../Textures/Texture_Atlas.h"
 
 std::vector<GLfloat> vertexPositions =
 {

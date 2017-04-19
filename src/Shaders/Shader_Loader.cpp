@@ -1,4 +1,4 @@
-#include "Shader_Loader.h"
+ï»¿#include "Shader_Loader.h"
 #include <fstream>
 #include <sstream>
 #include <stdexcpt.h>
@@ -38,7 +38,7 @@ namespace Shader
 			throw std::runtime_error("Could not open file: " + sourceFile);
 		}
 
-		//on recupere grace au flux l'intégralite du fichier
+		//on recupere grace au flux l'intÃ©gralite du fichier
 		stringStream << inFile.rdbuf();
 
 		//on le convertit en string
@@ -50,10 +50,10 @@ namespace Shader
 
 	GLuint compileShader(const GLchar * source, GLenum type)
 	{
-		//on crée le shader avec le type (frag ou vert)
+		//on crÃ©e le shader avec le type (frag ou vert)
 		auto ID = glCreateShader(type);
 
-		//on envoie à notre shader courant le code de notre fichier
+		//on envoie Ã  notre shader courant le code de notre fichier
 		glShaderSource(ID, 1, &source, nullptr);
 
 		//puis on le compile
@@ -62,7 +62,7 @@ namespace Shader
 		GLint isSuccess;
 		GLchar infoLog[GL_INFO_LOG_LENGTH];
 
-		//on recupere l'état de la compilation
+		//on recupere l'Ã©tat de la compilation
 		glGetShaderiv(ID, GL_COMPILE_STATUS, &isSuccess);
 
 		//Si la compilation n'a pas fonctionne, 
@@ -91,7 +91,7 @@ namespace Shader
 		GLint isSuccess;
 		GLchar infoLog[GL_INFO_LOG_LENGTH];
 
-		//on recupere l'état du link
+		//on recupere l'Ã©tat du link
 		glGetShaderiv(ID, GL_LINK_STATUS, &isSuccess);
 
 		//Si le link n'a pas fonctionne

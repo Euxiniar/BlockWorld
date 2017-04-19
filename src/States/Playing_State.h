@@ -1,8 +1,7 @@
 #pragma once
 #include "Game_State.h"
 #include "../Entity/Blocks/Quad.h"
-#include "../Entity/Textures/Texture_Atlas.h"
-#include "../Maths/Noise.h"
+#include "../Textures/Texture_Atlas.h"
 #include "../World/WChunk.h"
 
 namespace State
@@ -19,7 +18,6 @@ namespace State
 	private:
 		Texture::Texture_Atlas m_texture;
 		std::vector<Quad*> vecQuad;
-		HeightMap::Noise m_noise;
 		World::Chunk m_chunk;
 	};
 }

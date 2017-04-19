@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include "Basic_Texture.h"
-#include "../../Rules/Glm_Common.h"
+#include "../Rules/Glm_Common.h"
 
 
 namespace Texture
