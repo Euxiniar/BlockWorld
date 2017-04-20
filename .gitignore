@@ -1,4 +1,4 @@
-*.layout
+﻿*.layout
 *.depend
 *.cbp
 
@@ -38,7 +38,7 @@ CMakeSettings.json
 Debug/
 Release/
 Win32/
-Community-Game.dir/
+BlockWorld.dir/
 build/
 
 .out
@@ -90,8 +90,3 @@ dev_build.bat
 #CLion
 .idea
 cmake-build-debug/
-/pull.bat
-/deps/glm/glm
-/deps/glm
-/deps/SFML
-/deps/glew
