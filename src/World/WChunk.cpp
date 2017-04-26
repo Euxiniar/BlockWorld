@@ -1,23 +1,27 @@
-#include "WChunk.h"
+﻿#include "WChunk.h"
+#include <limits>
 
 namespace World
 {
 	Chunk::Chunk()
 		: m_texture("Texture_Atlas", 512, 16)
 	{
+		m_noise.setSeed(static_cast<uint64_t>(m_random.getInteger(0, INT32_MAX)));
 	}
 
-	void Chunk::generate(std::vector<Quad*>& quadTab, int xBound, int yBound)
+	void Chunk::generate(std::vector<Quad*>& quadTab, int xPos, int zPos)
 	{
-		//m_noise.setBound(xBound, yBound);
+		xPos *= 16;
+		zPos *= 16;
 		for (int z = 0; z < 16; z++)
 		{
 			for (int x = 0; x < 16; x++)
 			{
 				Quad* quad = new Quad(m_texture);
-				quad->position.z -= z;
-				quad->position.x -= x;
-				//quad->position.y -= static_cast<int>(m_noise.getPositionY(x, z) * 10);
+				quad->position.z -= (z+zPos);
+				quad->position.x -= (x+xPos);
+				quad->position.y -= static_cast<int>(m_noise.getValue((x + xPos), (z + zPos), 1, 1));
+
 				quadTab.push_back(quad);
 				for (int i = -10; i < quad->position.y; i++)
 				{

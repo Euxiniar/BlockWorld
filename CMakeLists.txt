@@ -21,6 +21,7 @@ include_directories(deps/SFML/include)
 add_definitions(-DSFML_STATIC)
 include_directories(deps/glm/glm)
 include_directories(deps/glew/include)
+add_definitions(-DGLEW_STATIC)
 
 enable_testing()
 
@@ -36,7 +37,7 @@ add_subdirectory(deps/glew)
 # Tired of manually copying it
 file(COPY Data/ DESTINATION Debug/Data/)
 
-target_link_libraries(${PROJECT_NAME} sfml-network sfml-graphics sfml-window sfml-system sfml-audio glew32)
+target_link_libraries(${PROJECT_NAME} sfml-network sfml-graphics sfml-window sfml-system sfml-audio ../../glew32s)
 
 # Enable C++ 14
 if (NOT UNIX)

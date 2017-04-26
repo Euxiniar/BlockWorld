@@ -1,7 +1,8 @@
-#pragma once
-//#include "../Maths/Noise.h"
+﻿#pragma once
+#include "../Maths/Noise_Generator.h"
 #include "../Entity/Blocks/Quad.h"
 #include "../Textures/Texture_Atlas.h"
+#include "../Maths/Random_Maths.h"
 
 #include <vector>
 
@@ -11,10 +12,11 @@ namespace World
 	{
 		public:
 			Chunk();
-			void generate(std::vector<Quad*>& quadTab, int xBound, int yBound);
+			void generate(std::vector<Quad*>& quadTab, int xPos, int zPos);
 
 		private :
-			//HeightMap::Noise m_noise;
+			Noise::Generator m_noise;
 			Texture::Texture_Atlas m_texture;
+			Maths::Random m_random;
 	};
 }
