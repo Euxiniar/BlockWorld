@@ -8,26 +8,13 @@ namespace State
 		:  Game_State(app),
 		m_texture("Texture_Atlas", 512, 16)
 	{
-		m_chunk.generate(vecQuad, 0, 0);
-		m_chunk.generate(vecQuad, 0, 1);
-		m_chunk.generate(vecQuad, 0, 2);
-		m_chunk.generate(vecQuad, 0, 3);
-		m_chunk.generate(vecQuad, 0, 4);
-		m_chunk.generate(vecQuad, 0, 5);
-		m_chunk.generate(vecQuad, 0, 6);
-		m_chunk.generate(vecQuad, 0, 7);
-		m_chunk.generate(vecQuad, 0, 8);
-		m_chunk.generate(vecQuad, 0, 9);
-		m_chunk.generate(vecQuad, 0, 10);
-		m_chunk.generate(vecQuad, 0, 11);
-		m_chunk.generate(vecQuad, 0, 12);
-		m_chunk.generate(vecQuad, 0, 13);
-		m_chunk.generate(vecQuad, 0, 14);
-		m_chunk.generate(vecQuad, 0, 15);
-		m_chunk.generate(vecQuad, 0, 16);
-		m_chunk.generate(vecQuad, 0, 17);
-		m_chunk.generate(vecQuad, 0, 18);
-		m_chunk.generate(vecQuad, 0, 19);
+		for (int z = 0; z < 2; z++)
+		{
+			for (int x = 0; x < 2; x++)
+			{
+				m_chunk.generate(vecQuad, x, z);
+			}
+		}
 	}
 
 	void Playing::input(Camera & camera, float dt)
