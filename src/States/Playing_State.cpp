@@ -8,9 +8,9 @@ namespace State
 		:  Game_State(app),
 		m_texture("Texture_Atlas", 512, 16)
 	{
-		for (int z = 0; z < 2; z++)
+		for (int z = 0; z < 1; z++)
 		{
-			for (int x = 0; x < 2; x++)
+			for (int x = 0; x < 1; x++)
 			{
 				m_chunk.generate(vecQuad, x, z);
 			}

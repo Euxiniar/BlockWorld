@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <cstdint>
 
@@ -24,6 +24,7 @@ namespace Noise
 	class Generator
 	{
 	public:
+		static Generator& get();
 		double getValue(int x, int z, int tileX, int tileZ) const;
 
 		void setNoiseFunction(const Noise::Data& data);

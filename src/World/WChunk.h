@@ -15,7 +15,6 @@ namespace World
 			void generate(std::vector<Quad*>& quadTab, int xPos, int zPos);
 
 		private :
-			Noise::Generator m_noise;
 			Texture::Texture_Atlas m_texture;
 			Maths::Random m_random;
 	};

@@ -1,9 +1,9 @@
-#include "Camera.h"
-
+﻿#include "Camera.h"
+#include "../Maths/Noise_Generator.h"
 #include <cmath>
 #include <SFML\Window\Keyboard.hpp>
 #include <SFML\Window\Mouse.hpp>
-
+#include <iostream>
 
 Camera::Camera()
 {
@@ -12,11 +12,14 @@ Camera::Camera()
 	rotation.x = 0;
 	rotation.y = 0;
 	rotation.z = 0;
+	position.y = 500;
 }
 
 void Camera::input(float dt)
 {
 	Vector3 change;
+	static bool isFalling=false;
+	static bool fly = false;
 	float speed = 6;
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
@@ -52,9 +55,27 @@ void Camera::input(float dt)
 	{
 		change.y += sin(glm::radians(90.0f)) * speed;
 	}
-
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::F))
+	{
+			fly = !fly;
+	}
 	position += change * dt;
 
+	if (static_cast<int>(position.y - 3) > static_cast<int>(-Noise::Generator::get().getValue((int)position.x, (int)position.z, 1, 1)) && !fly)
+	{
+		if (isFalling == false)
+		{
+			isFalling = true;
+			m_clock.restart();
+		}
+		//position.y -= dt*10;
+		//1/2*rho*v^2*surface*1  1.125
+		float elapsedTime = (float)m_clock.getElapsedTime().asSeconds();
+		position.y += (float)(-(5.8 * pow(elapsedTime, 2)) / 2)+(1/2*1.125*pow((-5.8*elapsedTime),2));
+		//-1/2*gt^2 
+	}
+	else
+		isFalling = false;
 	float dtMouse = 0.18f;
 
 	mouseInput(dtMouse);

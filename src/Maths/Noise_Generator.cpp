@@ -1,4 +1,4 @@
-#include "Noise_Generator.h"
+﻿#include "Noise_Generator.h"
 
 #include <cmath>
 
@@ -6,6 +6,11 @@
 
 namespace Noise
 {
+	Generator& Generator::get()
+	{
+		static Noise::Generator generator;
+		return generator;
+	}
 	uint64_t seed;
 
 	uint64_t getSeed()
