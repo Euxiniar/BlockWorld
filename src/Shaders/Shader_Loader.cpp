@@ -92,12 +92,12 @@ namespace Shader
 		GLchar infoLog[GL_INFO_LOG_LENGTH];
 
 		//on recupere l'état du link
-		glGetShaderiv(ID, GL_LINK_STATUS, &isSuccess);
+		glGetProgramiv(ID, GL_LINK_STATUS, &isSuccess);
 
 		//Si le link n'a pas fonctionne
 		if (!isSuccess)
 		{
-			glGetShaderInfoLog(ID, GL_INFO_LOG_LENGTH, nullptr, infoLog);
+			glGetProgramInfoLog(ID, GL_INFO_LOG_LENGTH, nullptr, infoLog);
 			throw std::runtime_error("Error link shader: " + std::string(infoLog));
 		}
 

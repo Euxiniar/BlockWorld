@@ -1,4 +1,4 @@
-#include "Quad.h"
+ï»¿#include "Quad.h"
 #include <vector>
 #include "../../Textures/Texture_Atlas.h"
 
@@ -111,14 +111,14 @@ std::vector<GLfloat> textureCoords;
 
 void insertTextureCoords(const std::vector<GLfloat>& coords)
 {
-	//on se positionne à la derniere place du tableau (qui est vide au début) et on rempli de coordonnees)
+	//on se positionne Ã  la derniere place du tableau (qui est vide au dÃ©but) et on rempli de coordonnees)
 	textureCoords.insert(textureCoords.end(), coords.begin(), coords.end());
 }
 
 
 Quad::Quad(Texture::Texture_Atlas& textureAtlas)
 {
-	//on crée le tableau de textures
+	//on crÃ©e le tableau de textures
 	insertTextureCoords(textureAtlas.getTextureCoords({ 1, 0 }));
 	insertTextureCoords(textureAtlas.getTextureCoords({ 1, 0 }));
 	insertTextureCoords(textureAtlas.getTextureCoords({ 1, 0 }));

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <stack>
 #include <memory>
 
@@ -20,8 +20,6 @@ public:
 private:
 	void init();
 	std::stack <std::unique_ptr<State::Game_State>> m_states;
-
-	//Maths::Random m_random;
 
 	//Creation de la partie du programme qui s'occupera du rendu
 	Renderer::Master_Renderer m_renderer;

@@ -15,29 +15,29 @@ Display::Display()
 	settings.majorVersion = 3;
 	settings.minorVersion = 3;
 
-	//cr�ation de la fenetre
+	//creation de la fenetre
 	m_window = std::make_unique<sf::RenderWindow>(sf::VideoMode(WIDTH, HEIGHT),
 		"Default",
 		sf::Style::Close,
 		settings);
 
-	//on impl�mente glew pour pouvoir utiliser OpenGL dans notre fenetre
+	//on implemente glew pour pouvoir utiliser OpenGL dans notre fenetre
 	glewInit();
 
-	//on d�finit la taille qu'occupera OpenGL dans la fenetre
+	//on definit la taille qu'occupera OpenGL dans la fenetre
 	glViewport(0, 0, WIDTH, HEIGHT);
 
-	//On rajoute le depth-test qui permettra d'�viter la supperposition des faces
+	//On rajoute le depth-test qui permettra d'eviter la supperposition des faces
 	glEnable(GL_DEPTH_TEST);
 
-	//on rajoute le cull face pour n'afficher que les faces qui sont faces � la camera
+	//on rajoute le cull face pour n'afficher que les faces qui sont faces a la camera
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_FRONT);
 	glFrontFace(GL_CW);
 	
-	//les derniers param�tres de la fenetre
+	//les derniers parametres de la fenetre
 	m_window->setMouseCursorVisible(false);
-	m_window->setFramerateLimit(60);
+	//m_window->setFramerateLimit(60);
 	m_window->setVerticalSyncEnabled(true);
 }
 

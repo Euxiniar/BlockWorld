@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <vector>
 #include "../Shaders/Simple_Shader.h"
 #include <SFML/System/Clock.hpp>
@@ -19,7 +19,7 @@ namespace Renderer
 
 		std::vector<const Quad *> m_quads;
 
-		//on cr�e un objet de type Simple_Shader
+		//on crée un objet de type Simple_Shader
 		Shader::Simple_Shader m_shader;
 
 		sf::Clock m_clock;

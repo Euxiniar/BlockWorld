@@ -1,4 +1,4 @@
-#include "Simple_Renderer.h"
+ï»¿#include "Simple_Renderer.h"
 #include "../Maths/Matrix_Maths.h"
 #include "../Entity/Blocks/Quad.h"
 #include <iostream>
@@ -31,7 +31,7 @@ namespace Renderer
 
 	void Simple_Renderer::prepare(const Quad & quad)
 	{
-		quad.getModel().bind(); //on récupère le model
+		quad.getModel().bind(); //on rÃ©cupÃ¨re le model
 
 		//envoie de la matrice de models (les quads) au shader
 		m_shader.setModelMatrix(Maths::createModelMatrix(quad));

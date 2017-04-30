@@ -71,7 +71,7 @@ void Camera::input(float dt)
 		//position.y -= dt*10;
 		//1/2*rho*v^2*surface*1  1.125
 		float elapsedTime = (float)m_clock.getElapsedTime().asSeconds();
-		position.y += (float)(-(5.8 * pow(elapsedTime, 2)) / 2)+(1/2*1.125*pow((-5.8*elapsedTime),2));
+		position.y += (float)(-(2.8 * pow(elapsedTime, 2)) / 2);
 		//-1/2*gt^2 
 	}
 	else

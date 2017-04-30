@@ -23,6 +23,11 @@ include_directories(deps/glm/glm)
 include_directories(deps/glew/include)
 add_definitions(-DGLEW_STATIC)
 
+if(MSVC)
+  set(CMAKE_EXE_LINKER_FLAGS
+      "${CMAKE_EXE_LINKER_FLAGS} /NODEFAULTLIB:LIBCMT")
+endif()
+
 enable_testing()
 
 set(SFML_BUILD_DOC OFF CACHE BOOL "" FORCE)

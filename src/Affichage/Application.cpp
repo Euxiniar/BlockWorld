@@ -1,4 +1,4 @@
-#include "Application.h"
+ï»¿#include "Application.h"
 #include "../States/Playing_State.h"
 
 Application::Application()
@@ -12,17 +12,17 @@ void Application::runMainGameLoop()
 {
 	sf::Clock clock;
 
-	//tant que la fenêtre est ouverte
+	//tant que la fenÃªtre est ouverte
 	while (Display::get().isOpen())
 	{
-		//temps écoulé a chaque execution de la boucle
+		//temps Ã©coulÃ© a chaque execution de la boucle
 		auto dt = clock.restart().asSeconds();
 
-		//on efface l'écran
+		//on efface l'Ã©cran
 		m_renderer.clear();
 
-		//On sélectionne le Last In et on appelle les fonctions inputs update et draw
-		//(les fonctions appelées seront celles des enfants de Game_State
+		//On sÃ©lectionne le Last In et on appelle les fonctions inputs update et draw
+		//(les fonctions appelÃ©es seront celles des enfants de Game_State
 		if (Display::get().isSelect())
 		{
 			m_states.top()->input(camera, dt);

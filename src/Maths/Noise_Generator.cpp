@@ -25,7 +25,7 @@ namespace Noise
 
 	double Generator::findNoise1(int n) const
 	{
-		n += m_seed;
+		n += (int)m_seed;
 		n = (n << 13) ^ n;
 		auto nn = (n * (n * n * 60493 + 19990303) + 1376312589) & 0x7fffffff; //wot
 		return 1.0 - ((double)nn / 1073741824.0); //wot (part 2)
@@ -33,7 +33,7 @@ namespace Noise
 
 	double Generator::findNoise2(double x, double z) const
 	{
-		return findNoise1(x + z * 57);
+		return findNoise1((int)(x + z * 57.0f));
 	}
 
 	double Generator::lerp(double a, double b, double z) const

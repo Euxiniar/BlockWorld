@@ -1,5 +1,6 @@
 ﻿#include "WChunk.h"
 #include <limits>
+#include <memory>
 
 namespace World
 {
@@ -23,12 +24,12 @@ namespace World
 				quad->position.y -= static_cast<int>(Noise::Generator::get().getValue((x + xPos), (z + zPos), 1, 1));
 
 				quadTab.push_back(quad);
-				for (int i = quad->position.y-1; i > quad->position.y-4; i--)
+				for (float i = quad->position.y-1; i > quad->position.y-4; i--)
 				{
 					Quad* quadUnder = new Quad(m_texture);
 					quadUnder->position.z += (z+zPos);
 					quadUnder->position.x += (x+xPos);
-					quadUnder->position.y += (float)i;
+					quadUnder->position.y += i;
 					quadTab.push_back(quadUnder);
 				}
 			}
